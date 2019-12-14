@@ -1,8 +1,9 @@
-#our base image
-FROM python:3-onbuild
+FROM python:3.7
 
-#specify the port number that the container should expose
+RUN mkdir /mlroc
+WORKDIR /mlroc
+ADD . /mlroc/
+RUN pip install -r requirements.txt
+
 EXPOSE 5000
-
-#run the application
-CMD ["python", "./run.py"]
+CMD ["python", "/mlroc/main.py"]
