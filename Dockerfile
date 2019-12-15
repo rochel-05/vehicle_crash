@@ -15,5 +15,5 @@ ADD . /mlroc/
 RUN pip install --no-cache-dir -r requirements.txt
 
 EXPOSE 5000
-CMD ["python", "/mlroc/run.py", "tail -f /dev/null"]
-#CMD: [ "/bin/bash", "-ce", "tail -f /dev/null" ]
+CMD ["python", "/mlroc/run.py"]
+CMD ["sh", "-c", "tail -f /dev/null"]
