@@ -2,14 +2,14 @@ FROM python:3.7
 
 RUN mkdir /mlroc
 WORKDIR /mlroc
-ADD accuracy.php /mlroc/accuracy.php
-ADD alert.php /mlroc/alert.php
-ADD detection.php /mlroc/detection.php
-ADD detection_result.php /mlroc/detection_result.php
-ADD error.php /mlroc/error.php
-ADD index.php /mlroc/index.php
-ADD login.php /mlroc/login.php
-ADD lpr.php /mlroc/lpr.php
+ADD templates/accuracy.php /mlroc/accuracy.php
+ADD templates/alert.php /mlroc/alert.php
+ADD templates/detection.php /mlroc/detection.php
+ADD templates/detection_result.php /mlroc/detection_result.php
+ADD templates/error.php /mlroc/error.php
+ADD templates/index.php /mlroc/index.php
+ADD templates/login.php /mlroc/login.php
+ADD templates/lpr.php /mlroc/lpr.php
 ADD . /mlroc/
 #RUN pip install -r requirements.txt
 RUN pip install --no-cache-dir -r requirements.txt
